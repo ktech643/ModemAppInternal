@@ -24,18 +24,19 @@ const MonthWiseFashionWeekAgenda = (props) => {
   console.log("reloaded", statedata);
   return (
     <>
-      {fashionWeekAgenda.length && month === "digital" ? (
+      {(fashionWeekAgenda.length && month === "digital") ||
+      (fashionWeekAgenda.length && month === "fashionweeks") ? (
         <View style={styles.monthWiseContainer}>
-          {month !== "digital" ? (
+          {/* {month !== "digital" ? (
             <Text style={[styles.showTitle, styles.monthTitle]}>{month}</Text>
-          ) : null}
+          ) : null} */}
           <View style={{ padding: 15 }}>
             {fashionWeekAgenda.map((e, key) => (
               <View
                 key={key}
                 style={{
                   ...styles.digitalInnerContainer,
-                  borderTopWidth: month === "digital" ? 0 : 1,
+                  borderTopWidth: month === "digital" ? 0 : 0,
                 }}
               >
                 {e?.dates ? (
@@ -46,57 +47,60 @@ const MonthWiseFashionWeekAgenda = (props) => {
                   <TouchableOpacity
                     key={key}
                     onPress={() => {
-                      navigation.navigate(compaignList[c].link, {
+                      navigation.navigate(compaignList[c]?.link, {
                         other: true,
                       });
                     }}
                   >
-                    <Text style={styles.eventName}>{compaignList[c].text}</Text>
+                    <Text style={styles.eventName}>
+                      {compaignList[c]?.text}
+                    </Text>
                   </TouchableOpacity>
                 ))}
               </View>
             ))}
           </View>
         </View>
-      ) : null}
-      {fashionWeekAgenda.length && month !== "digital" ? (
-        <View style={styles.monthWiseContainer}>
-          {/* <Text style={[styles.showTitle, styles.monthTitle]}>{month}</Text> */}
-          <View
-            style={[
-              styles.showsContainer,
-              {
-                justifyContent:
-                  fashionWeekAgenda.length > 1 ? "space-evenly" : "flex-start",
-                paddingHorizontal: fashionWeekAgenda.length > 1 ? 0 : 15,
-              },
-            ]}
-          >
-            {fashionWeekAgenda.length
-              ? fashionWeekAgenda.map((agenda, key) => (
-                  <View key={key} style={styles.singleShow}>
-                    <Text style={styles.durationDate}>
-                      {agenda?.dates ? agenda.dates : "no date available"}
+      ) : (
+        fashionWeekAgenda.length > 0 && (
+          <View style={styles.monthWiseContainer}>
+            {/* <Text style={[styles.showTitle, styles.monthTitle]}>{month}</Text> */}
+            <View
+              style={[
+                styles.showsContainer,
+                {
+                  justifyContent:
+                    fashionWeekAgenda.length > 1
+                      ? "space-evenly"
+                      : "flex-start",
+                  paddingHorizontal: fashionWeekAgenda.length > 1 ? 0 : 15,
+                },
+              ]}
+            >
+              {fashionWeekAgenda.map((agenda, key) => (
+                <View key={key} style={styles.singleShow}>
+                  <Text style={styles.durationDate}>
+                    {agenda?.dates ? agenda.dates : "no date available"}
+                  </Text>
+                  <TouchableOpacity
+                    onPress={() => {
+                      navigation.navigate("Cities", {
+                        screen: "Home",
+                        params: { fashionweekId: agenda?.fashionweek_id },
+                      });
+                      reload(!reloaded);
+                    }}
+                  >
+                    <Text style={styles.showTitle}>
+                      {agenda?.name.replace(/&amp;\s*\/?/gm, "& ")}
                     </Text>
-                    <TouchableOpacity
-                      onPress={() => {
-                        navigation.navigate("Cities", {
-                          screen: "Home",
-                          params: { fashionweekId: agenda?.fashionweek_id },
-                        });
-                        reload(!reloaded);
-                      }}
-                    >
-                      <Text style={styles.showTitle}>
-                        {agenda?.name.replace(/&amp;\s*\/?/gm, "& ")}
-                      </Text>
-                    </TouchableOpacity>
-                  </View>
-                ))
-              : null}
+                  </TouchableOpacity>
+                </View>
+              ))}
+            </View>
           </View>
-        </View>
-      ) : null}
+        )
+      )}
     </>
   );
 };
