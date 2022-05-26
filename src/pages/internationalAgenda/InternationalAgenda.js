@@ -49,7 +49,7 @@ const InternationalAgenda = (props) => {
   );
 
   const renderMonthWiseFashionAgendas =
-    internationAgendadata.length &&
+    internationAgendadata?.length &&
     Object.keys(internationAgendadata[0].indexes).length ? (
       Object.keys(internationAgendadata[0].indexes).map((index, key) => (
         <MonthWiseFashionWeekAgenda
