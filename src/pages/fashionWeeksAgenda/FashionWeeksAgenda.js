@@ -14,7 +14,6 @@ const FashionWeeksAgenda = props => {
   const [year, setYear] = useState(2022);
   const scrollRef = useRef();
   const [carouselItems , setCarouselItems] = useState(allFashionWeeksAgendas.length && allFashionWeeksAgendas[0]?.banners);
-  console.log('allFashionWeeksAgendas',allFashionWeeksAgendas)
   const windowWidth = Dimensions.get('window').width;
   const ref = useRef(null);
     useEffect(() => {

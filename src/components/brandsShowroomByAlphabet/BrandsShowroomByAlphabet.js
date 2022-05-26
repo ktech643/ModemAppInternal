@@ -69,9 +69,9 @@ const BrandsShowroomByAlphabet = props => {
       </View>
       <View style={styles.innerContainer}>
         <View style={styles.alignCenter}>
-          <TouchableOpacity style={styles.infoIconContainer} onPress={() => setWebModal(true)}>
+          {brandShowroomData?.miniwebsite_login?<TouchableOpacity style={styles.infoIconContainer} onPress={() => setWebModal(true)}>
             <Image source={I} style={styles.icon} />
-          </TouchableOpacity>
+          </TouchableOpacity>:<></>}
           {brandShowroomData?.link_gm ? <TouchableOpacity style={styles.pinIconContainer} onPress={() => Linking.openURL(brandShowroomData?.link_gm)}>
             <Image source={Pin} style={styles.pinIcon} />
           </TouchableOpacity> : <></>}
