@@ -27,7 +27,9 @@ const WebViewModal = props => {
       <View style={styles.centeredView} >
         <StatusBar barStyle="dark-content" />   
         <View style={[styles.modalContainer, {paddingTop: Platform.OS === 'ios' ? iosStatusBarHeight : 0}]}>
-        <Image source={Logo} style={styles.logo} />
+          <TouchableOpacity onPress={() => navigation.navigate('FirstScreen')}>
+            <Image source={Logo} style={styles.logo} />
+          </TouchableOpacity>
           <TouchableOpacity onPress={() => setWebModal(!webModal)} style={styles.backBtnContainer}>
             <Image style={styles.img} source={require('../../assets/icons/arrowBlack.png')} />
             <Text style={styles.btnText}>Back</Text>
