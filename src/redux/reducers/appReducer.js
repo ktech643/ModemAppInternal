@@ -1,7 +1,6 @@
-import { CLEARALL, FIRST_OPEN,LOGIN_SUCESS, REQUEST_FAILED, REQUEST_SENT, REGISTER_USER_REQUEST_SENT, REGISTER_USER_REQUEST_SUCCESSFULL, REGISTER_USER_REQUEST_FAILURE, LOGOUT, PRESIGNED_URL_REQUEST_SENT, PRESIGNED_URL_REQUEST_SUCCESSFUL, UPLOADING_FILE, UPLOADING_FILE_SUCCESSFUL, UPLOADING_FILE_FAILURE, RELOADDATA } from '../type'
+import { CLEARALL, FIRST_OPEN, LOGIN_SUCESS, REQUEST_FAILED, REQUEST_SENT, REGISTER_USER_REQUEST_SENT, REGISTER_USER_REQUEST_SUCCESSFULL, REGISTER_USER_REQUEST_FAILURE, LOGOUT, PRESIGNED_URL_REQUEST_SENT, PRESIGNED_URL_REQUEST_SUCCESSFUL, UPLOADING_FILE, UPLOADING_FILE_SUCCESSFUL, UPLOADING_FILE_FAILURE } from '../type'
 
 const initialState = {
-  reloaddata:true,
   loading: false,
   loggedIn: false,
   checked: false,
@@ -11,17 +10,11 @@ const initialState = {
   userType: 0,
   presignedURL: null,
   uploadingFile: false,
-  fileUploaded: false,
-  
+  fileUploaded: false
 }
 
 const appReducer = (state = initialState, action) => {
   switch (action.type) {
-    case RELOADDATA:
-      return {
-        ...state,
-        reloaddata: true
-      }
     case FIRST_OPEN:
       return {
         ...state,

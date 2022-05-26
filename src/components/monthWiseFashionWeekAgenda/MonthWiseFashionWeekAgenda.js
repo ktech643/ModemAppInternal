@@ -2,8 +2,8 @@ import React from 'react'
 import {
   StyleSheet, Text, View, TouchableOpacity
 } from 'react-native'
-import { connect,useSelector } from 'react-redux'
-import { reload } from '../../redux/actions/citiesActions'
+import { connect } from 'react-redux'
+
 const compaignList = {
   'multilabel-showrooms': {
     text: 'Multi Label Showrooms',
@@ -18,12 +18,9 @@ const compaignList = {
     link: 'AgendaTradeShows'
   }
 }
-
 const MonthWiseFashionWeekAgenda = props => {
-  const { fashionWeekAgenda, month,statedata, navigation } = props;
-  const reloaded = useSelector((state)=>state.app.reloaddata)
-  reload(true);
-console.log('reloaded',statedata)
+  const { fashionWeekAgenda, month, navigation } = props;
+  console.log('fashionWeekAgendaasasasa',fashionWeekAgenda)
   return(
     <>
       {fashionWeekAgenda.length && month === 'digital' ? <View style={styles.monthWiseContainer}>
@@ -48,7 +45,7 @@ console.log('reloaded',statedata)
         <View style={[styles.showsContainer, {justifyContent: fashionWeekAgenda.length > 1 ? 'space-evenly' : 'flex-start', paddingHorizontal: fashionWeekAgenda.length > 1 ? 0 : 15}]}>
           {fashionWeekAgenda.length ? fashionWeekAgenda.map((agenda, key) => <View key={key} style={styles.singleShow}>
             <Text style={styles.durationDate}>{agenda?.dates ?  agenda.dates : 'no date available'}</Text>
-            <TouchableOpacity onPress={() => {navigation.navigate("Cities", {screen: 'Shows', params: {fashionweekId: agenda?.fashionweek_id}}); reload(!reloaded)}}>
+            <TouchableOpacity onPress={() => navigation.navigate("Cities", {screen: 'Shows', params: {fashionweekId: agenda?.fashionweek_id}})}>
               <Text style={styles.showTitle}>{agenda?.name.replace(/&amp;\s*\/?/mg, '& ')}</Text>
             </TouchableOpacity>
           </View>) : null}
@@ -61,7 +58,6 @@ console.log('reloaded',statedata)
 
 const mapStateToProps = state => {
   return {
-    statedata: state.cities.statedata
   }
 }
 
