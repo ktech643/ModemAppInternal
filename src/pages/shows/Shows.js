@@ -55,6 +55,10 @@ const Shows = props => {
           <StatusBar barStyle="dark-content"/>
           <View style={styles.rootContainer}>
             <View style={styles.cityDetailsBtn}>
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+                  <Text>{"Back"}</Text>
+                </TouchableOpacity>
+
               <Text style={styles.cityName}>{route?.params?.cityEvent?.city.replace(/&amp;\s*\/?/mg, '& ')}</Text>
               <Text style={styles.date}>{route?.params?.cityEvent?.dates_collection}</Text>
             </View>
