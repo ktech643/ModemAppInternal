@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "modem",
+    "slug": "modem",
+    "privacy": "public",
+    "platforms": ["ios", "android", "web"],
+    "version": "1.0.12",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo-sm.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["assets/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.modem.app"
+    },
+    "android": {
+      "package": "com.modem.app"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "svg", "ts", "tsx"]
+    }
+  }
+}
