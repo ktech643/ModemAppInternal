@@ -1,58 +1,42 @@
-import React from 'react'
-import {
-  StyleSheet, Text, View
-} from 'react-native'
-import { connect } from 'react-redux'
-import SingleContact from '../singleContact'
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import SingleContact from "../singleContact";
 
-const BrowseByAlphabet = props => {
+const BrowseByAlphabet = (props) => {
   const { show, letter, setAlphaPos, alphaPos, navigation } = props;
-  const renderContact = show.map((contact, key) => <SingleContact navigation={navigation} contact={contact} key={key}/>)
-  return(
+  const renderContact = show.map((contact, key) => (
+    <SingleContact navigation={navigation} contact={contact} key={key} />
+  ));
+  return (
     <>
-      <View style={styles.row} onLayout={(event) => {
-        const { y } = event.nativeEvent.layout;
-        setAlphaPos({
-          ...alphaPos,
-          [letter]: y
-        })
-      }}>
+      <View style={styles.row}>
         <Text style={styles.time}>{letter}</Text>
         {renderContact}
       </View>
     </>
   );
-}
+};
 
-
-const mapStateToProps = state => {
-  return {
-  }
-}
-
-export default connect(mapStateToProps, {
-  
-})(BrowseByAlphabet)
-
+export default BrowseByAlphabet;
 
 const styles = StyleSheet.create({
   row: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    flexWrap: 'wrap',
-    borderBottomColor: 'black',
+    flexDirection: "row",
+    alignItems: "flex-start",
+    flexWrap: "wrap",
+    borderBottomColor: "black",
     borderBottomWidth: 1,
   },
   time: {
-    color: '#0000ff',
+    color: "#0000ff",
     fontSize: 26,
-    width: '30%',
-    maxWidth: '30%',
-    overflow: 'hidden',
+    width: "30%",
+    maxWidth: "30%",
+    overflow: "hidden",
     marginTop: 6,
   },
   contactName: {
-    color: 'black',
+    color: "black",
     fontSize: 26,
   },
   addUser: {
@@ -60,6 +44,4 @@ const styles = StyleSheet.create({
     width: 20,
     marginLeft: 6,
   },
-})
-
-
+});
