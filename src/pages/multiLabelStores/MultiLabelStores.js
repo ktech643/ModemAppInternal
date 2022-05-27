@@ -177,10 +177,10 @@ const MultiLabelStores = (props) => {
           <View style={styles.rootContainer}>
             <View
               style={styles.cityDetailsBtn}
-              onLayout={(event) => {
-                const { height } = event.nativeEvent.layout;
-                setShowDetailViewHeight(height);
-              }}
+              // onLayout={(event) => {
+              //   const { height } = event.nativeEvent.layout;
+              //   setShowDetailViewHeight(height);
+              // }}
             >
               <Text style={styles.cityName}>
                 {route?.params?.cityEvent?.city}
