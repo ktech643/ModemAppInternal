@@ -97,9 +97,9 @@ const Shows = (props) => {
         <View style={{ flex: 1 }}>
           {changeView && (
             <View
-              // onLayout={(event) => {
-              //   setLettersViewHeight(event.nativeEvent.layout.height);
-              // }}
+              onLayout={(event) => {
+                setLettersViewHeight(event.nativeEvent.layout.height);
+              }}
               style={{
                 position: "absolute",
                 zIndex: 1,

@@ -54,6 +54,7 @@ const ShowroomByAlphabet = (props) => {
     inputRange: [0, 1],
     outputRange: ["0deg", "360deg"],
   });
+  console.log("singleShowroom", singleShowroom);
   return (
     <View style={styles.container}>
       <View
@@ -64,7 +65,7 @@ const ShowroomByAlphabet = (props) => {
           alignSelf: "center",
         }}
       >
-        {singleShowroom?.path_image && (
+        {singleShowroom?.path_image ? (
           <TouchableOpacity
             style={styles.innerContainer}
             onPress={() =>
@@ -79,7 +80,7 @@ const ShowroomByAlphabet = (props) => {
               style={[styles.showroomImg]}
             />
           </TouchableOpacity>
-        )}
+        ) : null}
         {singleShowroom?.path_image_advertising1 ? (
           <TouchableOpacity
             style={styles.innerContainer}

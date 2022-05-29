@@ -9,7 +9,16 @@ const BrowseByAlphabet = (props) => {
   ));
   return (
     <>
-      <View style={styles.row}>
+      <View
+        style={styles.row}
+        onLayout={(event) => {
+          const { y } = event.nativeEvent.layout;
+          setAlphaPos({
+            ...alphaPos,
+            [letter]: y,
+          });
+        }}
+      >
         <Text style={styles.time}>{letter}</Text>
         {renderContact}
       </View>
