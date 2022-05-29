@@ -17,11 +17,14 @@ import { connect } from "react-redux";
 import AgendaByCountry from "../../components/agendaBycountry";
 import { fetchInternationAgenda } from "../../redux/actions/agendasActions";
 import MonthWiseFashionWeekAgenda from "../../components/monthWiseFashionWeekAgenda";
+import TradShows from "../../components/TradeShows";
+
 import Carousel from "react-native-snap-carousel";
+import response from "./response.json";
 
 const InternationalAgenda = (props) => {
-  const { loading, fetchInternationAgenda, internationAgendadata, navigation } =
-    props;
+  const { loading, fetchInternationAgenda, navigation } = props;
+  let internationAgendadata = response;
   const [refreshing, setRefreshing] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const scrollRef = useRef();
@@ -64,6 +67,17 @@ const InternationalAgenda = (props) => {
         There are no agendas in this category.
       </Text>
     );
+
+  const renderTradShows =
+    internationAgendadata?.length > 0 &&
+    internationAgendadata[0]?.trades?.length > 0 &&
+    internationAgendadata[0]?.trades.map((item, index) => (
+      <TradShows
+        key={index.toString()}
+        tradeShow={item}
+        navigation={navigation}
+      />
+    ));
 
   const windowWidth = Dimensions.get("window").width;
   const renderBannerCarousel = useCallback(
@@ -182,6 +196,25 @@ const InternationalAgenda = (props) => {
                     </TouchableOpacity>
                   </View>
                   {renderMonthWiseFashionAgendas}
+                  <View style={styles.tradeContainer}>
+                    <View
+                      style={[
+                        styles.showsContainer,
+                        {
+                          justifyContent:
+                            internationAgendadata[0]?.trades?.length > 1
+                              ? "space-evenly"
+                              : "flex-start",
+                          paddingHorizontal:
+                            internationAgendadata[0]?.trades?.length > 1
+                              ? 0
+                              : 15,
+                        },
+                      ]}
+                    >
+                      {renderTradShows}
+                    </View>
+                  </View>
                   {/* { (internationAgendadata?.length && Object.keys(internationAgendadata[0].indexes).length) ? Object.keys(internationAgendadata[0].indexes).map((index, key) => <View 
                 key={key}
               >
@@ -397,7 +430,7 @@ const styles = StyleSheet.create({
   singleShow: {
     borderTopColor: "#b2b2b2",
     borderTopWidth: 1,
-    width: "44%",
+    // width: "44%",
     paddingTop: 10,
   },
   durationDate: {
@@ -432,16 +465,6 @@ const styles = StyleSheet.create({
     padding: "4%",
     textTransform: "capitalize",
   },
-  showsContainer: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-  },
-  singleShow: {
-    borderTopColor: "#b2b2b2",
-    borderTopWidth: 1,
-    width: "44%",
-    paddingTop: 10,
-  },
   durationDate: {
     color: "#b2b2b2",
     fontSize: 18,
@@ -456,5 +479,10 @@ const styles = StyleSheet.create({
     color: "#B8B8B8",
     paddingVertical: 20,
     textAlign: "center",
+  },
+  tradeContainer: {
+    borderColor: "#b2b2b2",
+    borderWidth: 1,
+    marginBottom: 40,
   },
 });

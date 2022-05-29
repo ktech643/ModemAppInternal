@@ -21,7 +21,7 @@ const MonthWiseFashionWeekAgenda = (props) => {
   const { fashionWeekAgenda, month, statedata, navigation } = props;
   const reloaded = useSelector((state) => state.app.reloaddata);
   reload(true);
-  console.log("reloaded", statedata);
+  console.log("fashionWeekAgenda", fashionWeekAgenda);
   return (
     <>
       {fashionWeekAgenda.length && month === "digital" ? (
@@ -73,26 +73,29 @@ const MonthWiseFashionWeekAgenda = (props) => {
             ]}
           >
             {fashionWeekAgenda.length
-              ? fashionWeekAgenda.map((agenda, key) => (
-                  <View key={key} style={styles.singleShow}>
-                    <Text style={styles.durationDate}>
-                      {agenda?.dates ? agenda.dates : "no date available"}
-                    </Text>
-                    <TouchableOpacity
-                      onPress={() => {
-                        navigation.navigate("Cities", {
-                          screen: "Home",
-                          params: { fashionweekId: agenda?.fashionweek_id },
-                        });
-                        reload(!reloaded);
-                      }}
-                    >
-                      <Text style={styles.showTitle}>
-                        {agenda?.name.replace(/&amp;\s*\/?/gm, "& ")}
+              ? fashionWeekAgenda.map((agenda, key) => {
+                  console.log(agenda.content, "agenda");
+                  return (
+                    <View key={key} style={styles.singleShow}>
+                      <Text style={styles.durationDate}>
+                        {agenda?.dates ? agenda.dates : "no date available"}
                       </Text>
-                    </TouchableOpacity>
-                  </View>
-                ))
+                      <TouchableOpacity
+                        onPress={() => {
+                          navigation.navigate("Cities", {
+                            screen: "Home",
+                            params: { fashionweekId: agenda?.fashionweek_id },
+                          });
+                          reload(!reloaded);
+                        }}
+                      >
+                        <Text style={styles.showTitle}>
+                          {agenda?.name.replace(/&amp;\s*\/?/gm, "& ")}
+                        </Text>
+                      </TouchableOpacity>
+                    </View>
+                  );
+                })
               : null}
           </View>
         </View>

@@ -1,0 +1,217 @@
+[
+    {
+      "title": "May 2022",
+      "banners": [
+        {
+          "link": "https:\/\/visit.premium-group.com\/en\/?utm_source=Modem_SS23_Website_Banner&utm_medium=Website_Banner&utm_campaign=SS23",
+          "path_image": "https:\/\/www.modemonline.com\/img\/_upload\/_advertsing\/modem_pg_270x135_2.gif"
+        },
+        {
+          "link": "https:\/\/munichfashioncompany.com\/",
+          "path_image": "https:\/\/www.modemonline.com\/img\/_upload\/_advertsing\/supreme_ss23.jpg"
+        },
+        {
+          "link": "https:\/\/visit.premium-group.com\/en\/?utm_source=Modem_SS23_Website_Banner&utm_medium=Website_Banner&utm_campaign=SS23",
+          "path_image": "https:\/\/www.modemonline.com\/img\/_upload\/_advertsing\/modem_270x135_ft.jpg"
+        },
+        {
+          "link": "https:\/\/whosnext.com\/premiere-classe",
+          "path_image": "https:\/\/www.modemonline.com\/img\/_upload\/_advertsing\/premiere_classe_270x135.png"
+        },
+        {
+          "link": "https:\/\/mipel.com\/registrazione-visitatori\/",
+          "path_image": "https:\/\/www.modemonline.com\/img\/_upload\/_advertsing\/mipel_jan22.gif"
+        },
+        {
+          "link": "https:\/\/milano.themicam.com\/en\/visitors-registration\/",
+          "path_image": "https:\/\/www.modemonline.com\/img\/_upload\/_advertsing\/micam_fw22.gif"
+        },
+        {
+          "link": "https:\/\/whosnext.com\/whosnext",
+          "path_image": "https:\/\/www.modemonline.com\/img\/_upload\/_advertsing\/whos_next_jan22.png"
+        },
+        {
+          "link": "https:\/\/whosnext.com\/bijorhca",
+          "path_image": "https:\/\/www.modemonline.com\/img\/_upload\/_advertsing\/bijorhca_jan22.png"
+        }
+      ],
+      "previous_month": "04-2022",
+      "next_month": "06-2022",
+      "date": "May 2022",
+      "indexes": {
+        "digital": [
+          {
+            "fashionweek_id": "1227",
+            "name": "INTERNATIONAL SALES CAMPAIGNS SPRIG SUMMER  2023",
+            "type": "digital",
+            "dates": "Apr. 27-Nov. 15",
+            "has_content": true,
+            "content": [
+              "multilabel-showrooms",
+              "designer-showrooms",
+              "tradeshows"
+            ]
+          }
+        ],
+        "June 2022": [
+          {
+            "fashionweek_id": "1205",
+            "type": "normal",
+            "name": "London Fashion Week Men's &amp; Women's",
+            "dates": "June 11-13",
+            "has_content": true,
+            "content": [
+              "fashion-shows",
+              "multilabel-showrooms"
+            ]
+          },
+          {
+            "fashionweek_id": "1196",
+            "type": "normal",
+            "name": "Milano Men's Fashion Week",
+            "dates": "June 17-21",
+            "has_content": true,
+            "content": [
+              "fashion-shows",
+              "multilabel-showrooms",
+              "designer-showrooms"
+            ]
+          }
+        ]
+      },
+      "trades": [
+        {
+          "name": "e-P Summit",
+          "dates": "May 04-05",
+          "city": "Florence",
+          "country_id": "it",
+          "country": "Italy",
+          "time": "from 9.00am to 5.30pm",
+          "comments": "Pitti Connect Online until January 31, 2023<br />\r\n<br />\r\nTo see and download the complete events agenda: <a style=\"color:#383838;text-decoration:underline\" class=\"\" target=\"_blank\" href=\"https://epsummit.pittimmagine.com/it/agenda\" title=\"click here.\" >click here.</a>",
+          "collections": null,
+          "location": "Stazione Leopolda<br />viale Fratelli Rosselli 5<br />50144 Florence",
+          "alt_location": null,
+          "alt2_location": null,
+          "phone": null,
+          "contact": null,
+          "contact_email": "",
+          "contact_tel": "",
+          "contact2": "",
+          "contact2_email": "",
+          "contact2_tel": "",
+          "website": "https://epsummit.pittimmagine.com/it",
+          "parent_client": false,
+          "miniwebsite_type": "tradeshows",
+          "miniwebsite_login": null,
+          "facebook": null,
+          "twitter": null,
+          "instagram": null,
+          "description": "e-P Summit is the Pitti Immagine event that for over a decade has been dedicated to the relationship between fashion and the digital world, and is considered a leading European event within the debate over the supply and demand of innovations applied in the digital field. ",
+          "path_image": "/img/_upload/tradeshow_poster/ep_summit_20220503_125939.jpg",
+          "video": "",
+          "exhibitors_url": "",
+          "register_url": "https://epsummit.pittimmagine.com/it/news/new-registration",
+          "press_release": ""
+        },
+        {
+          "name": "Moda Makers",
+          "dates": "May 10-12",
+          "city": "Modena",
+          "country_id": "it",
+          "country": "Italy",
+          "time": "from 9.00am to 6.00pm",
+          "comments": "Last day until 16:30",
+          "collections": null,
+          "location": "ModenaFiere Trade Fair District<br />viale Virgilio 70/90<br />41123 Modena",
+          "alt_location": null,
+          "alt2_location": null,
+          "phone": null,
+          "contact": null,
+          "contact_email": "showoffice@modamakers.it",
+          "contact_tel": "",
+          "contact2": "Marcello Marchesini",
+          "contact2_email": "press@modamakers.it",
+          "contact2_tel": "",
+          "website": "https://modamakers.it",
+          "parent_client": false,
+          "miniwebsite_type": "tradeshows",
+          "miniwebsite_login": null,
+          "facebook": null,
+          "twitter": null,
+          "instagram": null,
+          "description": "",
+          "path_image": "",
+          "video": "",
+          "exhibitors_url": "",
+          "register_url": "https://modamakers.modenafiere.it",
+          "press_release": ""
+        },
+        {
+          "name": "Denim Première Vision",
+          "dates": "May 17-18",
+          "city": "Berlin",
+          "country_id": "de",
+          "country": "Germany",
+          "time": "from 10.00am to 6.30pm",
+          "comments": "Last day until 18:00.<br />\r\n+ Digital Denim Week<br />\r\nMay 16 20, 2022",
+          "collections": "Collections FW 23/24 ",
+          "location": "Arena Berlin<br />Eichenstraße 4<br />12435 Berlin",
+          "alt_location": null,
+          "alt2_location": null,
+          "phone": null,
+          "contact": null,
+          "contact_email": "",
+          "contact_tel": "",
+          "contact2": "",
+          "contact2_email": "",
+          "contact2_tel": "",
+          "website": "https://denim.premierevision.com",
+          "parent_client": false,
+          "miniwebsite_type": "tradeshows",
+          "miniwebsite_login": null,
+          "facebook": null,
+          "twitter": null,
+          "instagram": null,
+          "description": "",
+          "path_image": "",
+          "video": "",
+          "exhibitors_url": "https://marketplace.premierevision.com/en/suppliers/denim-premiere-vision-berlin.html?pk_vid=613041766da398ec16523756170e0ced&amp;redirected=1",
+          "register_url": "https://account.premierevision.com/PV/s/login/?language=en_US&amp;startURL=%2FPV%2Fs%2Fregistration-flow%3Fpk_vid%3D613041766da398ec16523755200e0ced%26codeEdition%3DDPA20221&amp;ec=302",
+          "press_release": ""
+        },
+        {
+          "name": "Supreme Celebration ",
+          "dates": "May 31-June 01",
+          "city": "Munich",
+          "country_id": "de",
+          "country": "Germany",
+          "time": "from 9.00am to 6.00pm",
+          "comments": "Last day until 18:00.",
+          "collections": "Collections FW 22/23 ",
+          "location": "MTC world of fashion / Haus 1<br />Ingolstädter Straße 45 / Taunusstraße 45<br />80807 Munich",
+          "alt_location": null,
+          "alt2_location": null,
+          "phone": null,
+          "contact": null,
+          "contact_email": "",
+          "contact_tel": "",
+          "contact2": "",
+          "contact2_email": "",
+          "contact2_tel": "",
+          "website": "https://munichfashioncompany.com",
+          "parent_client": false,
+          "miniwebsite_type": "tradeshows",
+          "miniwebsite_login": null,
+          "facebook": null,
+          "twitter": null,
+          "instagram": null,
+          "description": "",
+          "path_image": "",
+          "video": "",
+          "exhibitors_url": "",
+          "register_url": "",
+          "press_release": ""
+        }
+      ]
+    }
+  ]
