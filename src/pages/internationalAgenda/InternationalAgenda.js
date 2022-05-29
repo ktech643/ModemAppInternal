@@ -23,8 +23,8 @@ import Carousel from "react-native-snap-carousel";
 import response from "./response.json";
 
 const InternationalAgenda = (props) => {
-  const { loading, fetchInternationAgenda, navigation } = props;
-  let internationAgendadata = response;
+  const { loading, fetchInternationAgenda, internationAgendadata, navigation } =
+    props;
   const [refreshing, setRefreshing] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const scrollRef = useRef();
