@@ -104,7 +104,8 @@ const styles = StyleSheet.create({
     width: "35%",
     maxWidth: "35%",
     overflow: "hidden",
-    justifyContent: "center",
+    marginTop: 15,
+    // justifyContent: "center",
   },
   eventDescription: {
     color: "#646464",
@@ -127,7 +128,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     paddingTop: 13,
     paddingBottom: 13,
-    marginBottom: -1,
+    // marginBottom: -1,
   },
   contactName: {
     color: "black",

@@ -20,7 +20,6 @@ import MonthWiseFashionWeekAgenda from "../../components/monthWiseFashionWeekAge
 import TradShows from "../../components/TradeShows";
 
 import Carousel from "react-native-snap-carousel";
-import response from "./response.json";
 
 const InternationalAgenda = (props) => {
   const { loading, fetchInternationAgenda, internationAgendadata, navigation } =
