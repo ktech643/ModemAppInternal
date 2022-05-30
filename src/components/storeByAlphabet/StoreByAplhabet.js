@@ -162,6 +162,9 @@ const StoreByAplhabet = (props) => {
           <Text style={styles.contactName}>
             {store?.name.replace(/&amp;\s*\/?/gm, " & ")}
           </Text>
+          <Text style={[styles.contactName,styles.cityFont]}>
+             {store?.city.replace(/&amp;\s*\/?/gm, " & ")}
+          </Text>
           <TouchableOpacity onPress={() => setShowModal(true)}>
             <Image
               source={addContact ? UserAdded : User}
@@ -200,6 +203,11 @@ const styles = StyleSheet.create({
   row: {
     flexDirection: "row",
     alignItems: "center",
+  },
+  cityFont: {
+    fontSize: 16,
+    paddingLeft:6,
+    paddingTop:4,
   },
   contactName: {
     color: "black",

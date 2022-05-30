@@ -48,16 +48,16 @@ const TradShows = (props) => {
           <View style={{ marginBottom: 40 }}>
             <View style={styles.expandedView}>
               {tradeShow?.dates ? (
-                <Text style={styles.mb10}>{`${tradeShow?.dates}`}</Text>
+                <Text style={[styles.mb10, styles.myFont]}>{`${tradeShow?.dates}`}</Text>
               ) : null}
-              {tradeShow?.time ? <Text>{tradeShow?.time}</Text> : null}
+              {tradeShow?.time ? <Text style={styles.myFont}>{tradeShow?.time}</Text> : null}
               {tradeShow?.comments ? (
                 // <Text style={styles.mb10}>{tradeShow?.comments}</Text>
                 <AutoHeightWebView
                   automaticallyAdjustContentInsets={false}
-                  style={styles.mb10}
+                  style={[styles.mb10]}
                   source={{
-                    html: `<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><p style="font-size: 18px; padding: 0;">${tradeShow?.comments}</p></body></html>`,
+                    html: `<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><p style="font-size: 19px; padding: 0;">${tradeShow?.comments}</p></body></html>`,
                   }}
                 />
               ) : null}
@@ -65,11 +65,11 @@ const TradShows = (props) => {
                 <AutoHeightWebView
                   automaticallyAdjustContentInsets={false}
                   source={{
-                    html: `<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><p style="font-size: 18px; padding: 0;">${tradeShow?.location}</p></body></html>`,
+                    html: `<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><p style="font-size: 19px; padding: 0;">${tradeShow?.location}</p></body></html>`,
                   }}
                 />
               ) : null}
-              <Text style={styles.mV10}>{`See on Map`}</Text>
+              {/* <Text style={styles.mV10}></Text> */}
 
               <View style={[styles.row, styles.mb10]}>
                 {tradeShow?.website ? (
@@ -92,7 +92,7 @@ const TradShows = (props) => {
             </View>
             {tradeShow?.description ? (
               <View style={styles.expandedView}>
-                <Text style={styles.mb10}>{tradeShow?.description}</Text>
+                <Text style={[styles.mb10,styles.myFont]}>{tradeShow?.description}</Text>
               </View>
             ) : null}
           </View>
@@ -155,11 +155,14 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   mb10: {
-    marginBottom: 10,
+    marginBottom: 4,
+  },
+  myFont: {
+    fontSize: 17,
   },
   row: {
     flexDirection: "row",
-    justifyContent: "space-between",
+   // justifyContent: "space-between",
   },
   iconContainer: {
     paddingHorizontal: 8,
