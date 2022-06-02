@@ -112,13 +112,13 @@ const MultiLabelStores = (props) => {
       Object.keys(filteredStores[0].indexes).map((index, key) => (
         <View
           key={key}
-          // onLayout={(event) => {
-          //   const { y } = event.nativeEvent.layout;
-          //   setAlphaPos({
-          //     ...alphaPos,
-          //     [index]: y,
-          //   });
-          // }}
+          onLayout={(event) => {
+            const { y } = event.nativeEvent.layout;
+            setAlphaPos({
+              ...alphaPos,
+              [index]: y,
+            });
+          }}
         >
           {filteredStores[0]?.indexes[index]?.length ? (
             <TextInput editable={false} style={styles.letter}>
