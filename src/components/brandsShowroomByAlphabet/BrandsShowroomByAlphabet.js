@@ -174,6 +174,11 @@ const BrandsShowroomByAlphabet = (props) => {
       </View>
       {showDetails && (
         <View style={styles.showroomDetails}>
+          {brandShowroomData.parent_name ? (
+            <Text style={[styles.additionalInfo, styles.customPadding]}>
+              {brandShowroomData.parent_name}
+            </Text>
+          ) : null}
           <Text style={[styles.additionalInfo, styles.customPadding]}>
             {brandShowroomData.address}
           </Text>
