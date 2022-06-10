@@ -38,10 +38,10 @@ const TradShows = (props) => {
           }}
         >
           <Text style={styles.showTitle}>
-            {tradeShow?.name.replace(/&amp;\s*\/?/gm, "& ")}
+            { tradeShow?.name ? tradeShow?.name.replace(/&amp;\s*\/?/gm, "& ") : ""}
           </Text>
           <Text style={styles.city}>
-            {tradeShow?.city.replace(/&amp;\s*\/?/gm, "& ")}
+             { tradeShow?.citytradeShow ? tradeShow?.citytradeShow?.city.replace(/&amp;\s*\/?/gm, "& ") : ""}
           </Text>
         </TouchableOpacity>
         {expand && (

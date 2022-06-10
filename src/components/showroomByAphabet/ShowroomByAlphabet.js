@@ -65,22 +65,7 @@ const ShowroomByAlphabet = (props) => {
           alignSelf: "center",
         }}
       >
-        {singleShowroom?.path_image ? (
-          <TouchableOpacity
-            style={styles.innerContainer}
-            onPress={() =>
-              singleShowroom?.link_path_image
-                ? Linking.openURL(singleShowroom?.link_path_image)
-                : {}
-            }
-          >
-            <Image
-              source={{ uri: singleShowroom.path_image }}
-              resizeMode="contain"
-              style={[styles.showroomImg]}
-            />
-          </TouchableOpacity>
-        ) : null}
+       
         {singleShowroom?.path_image_advertising1 ? (
           <TouchableOpacity
             style={styles.innerContainer}

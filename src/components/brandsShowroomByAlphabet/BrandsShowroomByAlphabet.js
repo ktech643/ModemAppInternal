@@ -56,26 +56,7 @@ const BrandsShowroomByAlphabet = (props) => {
           alignSelf: "center",
         }}
       >
-        {brandShowroomData?.path_image ? (
-          <TouchableOpacity
-            style={styles.innerContainerImg}
-            onPress={() =>
-              brandShowroomData?.link_path_image
-                ? Linking.openURL(brandShowroomData?.link_path_image)
-                : {}
-            }
-          >
-            <Image
-              source={
-                brandShowroomData?.path_image
-                  ? { uri: brandShowroomData.path_image }
-                  : require("../../assets/img/post2.png")
-              }
-              resizeMode="contain"
-              style={styles.showroomImg}
-            />
-          </TouchableOpacity>
-        ) : null}
+        
         {brandShowroomData?.path_image_advertising1 ? (
           <TouchableOpacity
             style={styles.innerContainerImg}
@@ -174,6 +155,12 @@ const BrandsShowroomByAlphabet = (props) => {
       </View>
       {showDetails && (
         <View style={styles.showroomDetails}>
+          {brandShowroomData?.parent_name ?
+          <Text style={[styles.additionalInfo, styles.customPadding]}>
+          {brandShowroomData.parent_name}
+        </Text> : <></>  
+        }
+          
           <Text style={[styles.additionalInfo, styles.customPadding]}>
             {brandShowroomData.address}
           </Text>
