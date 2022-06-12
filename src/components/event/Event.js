@@ -38,7 +38,7 @@ const Event = (props) => {
           <Text style={styles.contactName}>
             {event?.title.replace(/&amp;\s*\/?/gm, "& ")}
           </Text>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             onPress={() => setShowModal(true)}
             style={{ marginBottom: Platform.OS === "ios" ? 3 : 0 }}
           >
@@ -46,7 +46,7 @@ const Event = (props) => {
               source={addContact ? UserAdded : User}
               style={styles.addUser}
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
         <View style={styles.alignCenter}>
           {event?.minisite_login && event?.minisite_type && (
