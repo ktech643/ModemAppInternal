@@ -4,7 +4,7 @@
     "slug": "modem",
     "privacy": "public",
     "platforms": ["ios", "android", "web"],
-    "version": "1.0.19",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo-sm.png",
     "splash": {
@@ -21,7 +21,9 @@
       "bundleIdentifier": "com.modem.app"
     },
     "android": {
-      "package": "com.app.modem"
+      "package": "com.app.modem",
+      "versionCode": 3,
+      "permissions":["READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
     },
     "packagerOpts": {
       "config": "metro.config.js",

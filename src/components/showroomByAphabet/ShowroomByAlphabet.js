@@ -123,12 +123,12 @@ const ShowroomByAlphabet = (props) => {
           )}
           <Text style={styles.contactName}>
             {singleShowroom?.name.replace(/&amp;\s*\/?/gm, " & ")}
-            <TouchableOpacity onPress={() => setShowModal(true)}>
+            {/* <TouchableOpacity onPress={() => setShowModal(true)}>
               <Image
                 source={addContact ? UserAdded : User}
                 style={styles.addUser}
               />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </Text>
         </Pressable>
       </View>

@@ -165,12 +165,12 @@ const StoreByAplhabet = (props) => {
           <Text style={[styles.contactName,styles.cityFont]}>
              {store?.city.replace(/&amp;\s*\/?/gm, " & ")}
           </Text>
-          <TouchableOpacity onPress={() => setShowModal(true)}>
+          {/* <TouchableOpacity onPress={() => setShowModal(true)}>
             <Image
               source={addContact ? UserAdded : User}
               style={styles.addUser}
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </Pressable>
       </View>
       {storeDetails && (

@@ -39,9 +39,9 @@ const CompaignBrandDetail = props => {
         <TouchableOpacity onPress={() => setShowDetails(!showDetails)} style={{maxWidth: '85%'}}>
           <Text style={styles.contactName}>{brand?.name.replace(/&amp;\s*\/?/mg, '& ')}</Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => setShowModal(true)}>
+        {/* <TouchableOpacity onPress={() => setShowModal(true)}>
           <Image source={addContact ? UserAdded : User} style={styles.addUser} /> 
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
       <View style={styles.alignCenter}>
         {brand?.miniwebsite_login && brand?.miniwebsite_type ?

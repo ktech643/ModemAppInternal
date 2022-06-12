@@ -48,9 +48,9 @@ const SingleCategoryEvent = props => {
           {brandEventData?.name ? <Animated.Image source={Star} style={[styles.star,{transform: [{ rotate: spin }]}]}/> : <View style={styles.star}></View>}
           <Text style={styles.contactName}>
             { brandEventData?.name.replace(/&amp;\s*\/?/mg, '& ').replace(/&quot;\s*\/?/mg, '"') }
-            <TouchableOpacity onPress={() => setShowModal(true)}>
+            {/* <TouchableOpacity onPress={() => setShowModal(true)}>
               <Image source={addContact ? UserAdded : User} style={styles.addUser} /> 
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </Text>
         </Pressable>
       </View>

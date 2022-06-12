@@ -24,9 +24,9 @@ const BeautySaloonByAlphabet = props => {
         {/* <Image source={Star} style={styles.star}/> */}
         <TouchableOpacity style={{maxWidth: '80%'}}>
           <Text style={styles.contactName}>{saloon?.name.replace(/&amp;\s*\/?/mg, '& ')}
-            <TouchableOpacity onPress={() => setShowModal(true)}>
+            {/* <TouchableOpacity onPress={() => setShowModal(true)}>
               <Image source={addContact ? UserAdded : User} style={styles.addUser} /> 
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </Text>
         </TouchableOpacity>
       </View>

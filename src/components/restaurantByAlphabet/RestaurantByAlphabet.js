@@ -31,9 +31,9 @@ const RestaurantByAlphabet = props => {
         <Pressable style={{maxWidth: '94%'}}>
           <Text style={[styles.contactName, {flexDirection: 'row'}]}>
             {citiesresturant.name.replace(/&amp;\s*\/?/mg, '& ')}
-            <Pressable onPress={() => setShowModal(true)}>
+            {/* <Pressable onPress={() => setShowModal(true)}>
               <Image source={addContact ? UserAdded : User} style={styles.addUser} /> 
-            </Pressable>
+            </Pressable> */}
           </Text>
         </Pressable>
       </View>

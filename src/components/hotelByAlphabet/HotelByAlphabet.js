@@ -29,9 +29,9 @@ const HotelByAlphabet = props => {
         {/* <Image source={Star} style={styles.star}/> */}
         <Pressable style={{maxWidth: '90%'}}>
           <Text style={[styles.contactName, {flexDirection: 'row'}]}>{citieshotel.name.replace(/&amp;\s*\/?/mg, ' & ')}
-            <TouchableOpacity onPress={() => setShowModal(true)}>
+            {/* <TouchableOpacity onPress={() => setShowModal(true)}>
               <Image source={addContact ? UserAdded : User} style={styles.addUser} /> 
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </Text>
         </Pressable>
       </View>

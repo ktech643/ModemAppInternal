@@ -94,9 +94,9 @@ const PressOfficeContact = props => {
           {user?.name ?  <Animated.Image source={Star} style={{height: 14,width: 14,marginRight: 10,marginTop: 9,transform: [{ rotate: spin }]}}/> : <View style={styles.star}></View>}
           <Text style={styles.contactName}>
             {user.name.replace(/&amp;\s*\/?/mg, '& ')}
-            <TouchableOpacity onPress={() => setShowModal(true)}>
+            {/* <TouchableOpacity onPress={() => setShowModal(true)}>
               <Image source={addContact ? UserAdded : User} style={styles.addUser} /> 
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </Text>
         </Pressable>
 

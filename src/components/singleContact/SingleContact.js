@@ -33,7 +33,7 @@ const SingleContact = (props) => {
           <Text style={styles.contactName}>
             {contact.title.replace(/&amp;\s*\/?/gm, "& ")}
           </Text>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             onPress={() => setShowModal(true)}
             style={{ marginBottom: Platform.OS === "ios" ? 3 : 0 }}
           >
@@ -41,7 +41,7 @@ const SingleContact = (props) => {
               source={addContact ? UserAdded : User}
               style={styles.addUser}
             />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
         <View style={styles.alignCenter}>
           {contact?.minisite_login && contact?.minisite_type && (
