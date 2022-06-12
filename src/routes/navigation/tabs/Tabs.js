@@ -130,76 +130,76 @@ const TabNavigator = () => {
                   </TextInput>
                 </View>
               );
-            case "Connect":
-              return (
-                <View style={{ marginLeft: "-20%", alignItems: "center" }}>
-                  <Image
-                    source={ConnectionsActive}
-                    style={styles.connections}
-                  />
-                  <TextInput
-                    editable={false}
-                    style={{
-                      color: "white",
-                      // color: '#646464',
-                      color: "#646464",
-                      fontSize: 10,
-                      fontWeight: "bold",
-                      borderBottomColor: focused ? "black" : "black",
-                      borderBottomWidth: 2,
-                      paddingTop: 2,
-                      paddingBottom: 1,
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    Connect
-                  </TextInput>
-                </View>
-              );
-            case "Magzine":
-              return (
-                <View style={styles.center}>
-                  <Image source={MagzineActive} style={styles.magazine} />
-                  <TextInput
-                    editable={false}
-                    style={{
-                      // color: 'white',
-                      color: "#646464",
-                      fontSize: 10,
-                      fontWeight: "bold",
-                      borderBottomColor: focused ? "black" : "black",
-                      borderBottomWidth: 2,
-                      paddingTop: 2,
-                      paddingBottom: 1,
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    modemmag
-                  </TextInput>
-                </View>
-              );
-            case "Account":
-              return (
-                <View style={styles.center}>
-                  <Image source={AccountActive} style={styles.account} />
-                  <TextInput
-                    editable={false}
-                    style={{
-                      // color: 'white',
-                      color: "#646464",
-                      fontSize: 10,
-                      fontWeight: "bold",
-                      borderBottomColor: focused ? "black" : "black",
-                      borderBottomWidth: 2,
-                      paddingTop: 2,
-                      paddingBottom: 1,
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    mymodem
-                  </TextInput>
-                </View>
-              );
+            // case "Connect":
+            //   return (
+            //     <View style={{ marginLeft: "-20%", alignItems: "center" }}>
+            //       <Image
+            //         source={ConnectionsActive}
+            //         style={styles.connections}
+            //       />
+            //       <TextInput
+            //         editable={false}
+            //         style={{
+            //           color: "white",
+            //           // color: '#646464',
+            //           color: "#646464",
+            //           fontSize: 10,
+            //           fontWeight: "bold",
+            //           borderBottomColor: focused ? "black" : "black",
+            //           borderBottomWidth: 2,
+            //           paddingTop: 2,
+            //           paddingBottom: 1,
+            //           textTransform: "uppercase",
+            //         }}
+            //       >
+            //         Connect
+            //       </TextInput>
+            //     </View>
+            //   );
+            // case "Magzine":
+            //   return (
+            //     <View style={styles.center}>
+            //       <Image source={MagzineActive} style={styles.magazine} />
+            //       <TextInput
+            //         editable={false}
+            //         style={{
+            //           // color: 'white',
+            //           color: "#646464",
+            //           fontSize: 10,
+            //           fontWeight: "bold",
+            //           borderBottomColor: focused ? "black" : "black",
+            //           borderBottomWidth: 2,
+            //           paddingTop: 2,
+            //           paddingBottom: 1,
+            //           textTransform: "uppercase",
+            //         }}
+            //       >
+            //         modemmag
+            //       </TextInput>
+            //     </View>
+            //   );
+            // case "Account":
+            //   return (
+            //     <View style={styles.center}>
+            //       <Image source={AccountActive} style={styles.account} />
+            //       <TextInput
+            //         editable={false}
+            //         style={{
+            //           // color: 'white',
+            //           color: "#646464",
+            //           fontSize: 10,
+            //           fontWeight: "bold",
+            //           borderBottomColor: focused ? "black" : "black",
+            //           borderBottomWidth: 2,
+            //           paddingTop: 2,
+            //           paddingBottom: 1,
+            //           textTransform: "uppercase",
+            //         }}
+            //       >
+            //         mymodem
+            //       </TextInput>
+            //     </View>
+            //   );
             default:
               return <View />;
           }
@@ -232,22 +232,22 @@ const TabNavigator = () => {
       />
       <Tab.Screen name="Cities" component={HomeNavigator} />
       <Tab.Screen name="Agenda" component={AgendaNavigator} />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Connect"
         component={(props) => <NullView {...props} title="Connect" />}
-      />
+      /> */}
       {/* <Tab.Screen name="Magzine" component={HomeNavigator} />
       <Tab.Screen name="Account" component={HomeNavigator} /> */}
       {/* <Tab.Screen name="Agenda" component={NullView} /> */}
       {/* <Tab.Screen name="Connections" component={NullView}/> */}
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Magzine"
         component={(props) => <NullView {...props} title="Modem Mag" />}
       />
       <Tab.Screen
         name="Account"
         component={(props) => <NullView {...props} title="My Modem" />}
-      />
+      /> */}
     </Tab.Navigator>
   );
 };
